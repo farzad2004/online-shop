@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
-import Homepage from "./pages/homepage/homepage.component";
 import HomePage from "./pages/homepage/homepage.component";
-import shopPage from "./pages/shop/shop.component";
 import ShopPage from "./pages/shop/shop.component";
 
 const HasJackets = () => (
@@ -11,12 +9,12 @@ const HasJackets = () => (
     <h1>JACKETS PAGE </h1>
   </div>
 );
+
 function App() {
   return (
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/shop/jackets" component={HasJackets} />
         <Route path="/shop" component={ShopPage} />
       </Switch>
     </div>
